@@ -23,7 +23,7 @@ Enemy en1;
 		img = i.getImage();
 		time = new Timer(5,this);
 		time.start();
-		en1 = new Enemy(1024, 350, "src/res/enemy_flip.jpg");
+		en1 = new Enemy(1024, 418, "src/res/enemy2.png");
 		//en2 = new Enemy(700, 350, "F:\\CSE\\Java practice\\DriveCar\\enemy.gif");
 	}
 	

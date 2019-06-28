@@ -10,7 +10,7 @@ public class Dude {
 	int x, dx , y, dy, nx2, nx, h, b;
 	Image still, rstill, car, rcar, fly;
 	ImageIcon i = new ImageIcon("src/res/still.gif");
-	ImageIcon m = new ImageIcon("src/res/car.png");
+	ImageIcon m = new ImageIcon("src/res/rcar.png");
 	ImageIcon n = new ImageIcon("src/res/rcar.png");
 	ImageIcon j = new ImageIcon("src/res/rstill.gif");
 	ImageIcon k = new ImageIcon("src/res/fly.gif");
@@ -75,8 +75,6 @@ public class Dude {
 	public void keyPressed(KeyEvent e){
 		int key = e.getKeyCode();
 		
-		if (key == KeyEvent.VK_LEFT)
-		{dx = -1; still = j.getImage();b = -1;}
 		
 		if (key == KeyEvent.VK_RIGHT)
 		{dx = 1; still = i.getImage();b = 1;}
@@ -100,7 +98,7 @@ public class Dude {
 		{dx = 0; still = n.getImage();b = -1;}
 		
 		if (key == KeyEvent.VK_RIGHT)
-		{dx = 0; still = m.getImage();b = 1;}
+		{dx = 0; still = n.getImage();b = 1;}
 		
 		if (key == KeyEvent.VK_UP)
 			{dy = 2; h = 2;}

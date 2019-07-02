@@ -32,5 +32,9 @@ public class Enemy {
 		x = x - dx - dx;
 		
 	}
+	public void move1 (int dx){
+		x = x - dx - dx;
+		
+	}
 	
 }

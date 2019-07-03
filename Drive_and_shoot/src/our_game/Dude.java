@@ -9,6 +9,8 @@ import javax.swing.ImageIcon;
 public class Dude {
 	int x, dx , y, dy, nx2, nx, h, b;
 	Image still, rstill, car, rcar, fly;
+	static ArrayList bullets;
+
 	ImageIcon i = new ImageIcon("src/res/still.gif");
 	ImageIcon m = new ImageIcon("src/res/rcar.png");
 	ImageIcon n = new ImageIcon("src/res/rcar.png");
@@ -16,24 +18,21 @@ public class Dude {
 	ImageIcon k = new ImageIcon("src/res/fly.gif");
 
 	public Dude(){
-		still = m.getImage();
-		fly = k.getImage();
+		still = m.getImage();//right movement image
+		fly = k.getImage();//fly image
 		x = 50;
 		y = 435;
-		nx2 = 1024;
-		nx = 0;
+		nx2 = 1024;//rightmost x coordinate
+		nx = 0;//leftmost x coordinate
 		dy = 0;
 		h = 2;
-		bullets = new ArrayList();
+		bullets = new ArrayList();//arraylist of bullets
 		b = 1;
 	}
 
-	static ArrayList bullets;
-
 	public void rightFire(){
 	    Bullet z = new Bullet(390, y+20);
-	    bullets.add(z);
-	    
+	    bullets.add(z);//adding bullet object
 	}
 
 	public void leftFire(){
@@ -41,11 +40,16 @@ public class Dude {
 	    bullets.add(z);
 	    
 	}
-	public static ArrayList getBullets(){
-		return bullets;
+	public static ArrayList getBullets()
+	{
+		return bullets;//returning arraylist of bullets
+
 	}
 
 	public void move(){
+/*
+		as the x indcreases, nx & nx2 also indcreases accordingly
+*/
 		x = x + dx + dx;
 		nx2 = nx2 + dx + dx;
 		nx = nx + dx + dx;
